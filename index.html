@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário de cadastro</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-light">
+    <div class="container mt-5">
+      <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white">
+          <h2 class="mb-0 h4">Formulário de cadastro</h2>
+        </div>
+        <div class="card-body">
+          <form action="#" method="POST" enctype="multipart/form-data">
+            <div class="row g-3">
+              <div class="col-md-12">
+                <label for="nome" class="form-label">Nome completo:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nome"
+                  name="nome"
+                  required
+                />
+              </div>
+
+              <div class="col-md-6">
+                <label for="telefone" class="form-label">Telefone:</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="telefone"
+                  name="telefone"
+                  placeholder="(DD)XXXXX-XXXX"
+                  pattern="\(\d{2}\)\d{5}-\d{4}"
+                  title="Informe o telefone no formato (DD)XXXXX-XXXX"
+                  required
+                />
+              </div>
+
+              <div class="col-md-6">
+                <label for="email" class="form-label">E-mail:</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  placeholder="email@ifsp.edu.br"
+                  pattern=".+@ifsp\.edu\.br"
+                  title="O e-mail deve ser obrigatoriamente do domínio @ifsp.edu.br"
+                  required
+                />
+              </div>
+
+              <div class="col-md-4">
+                <label for="cpf" class="form-label">CPF:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="cpf"
+                  name="cpf"
+                  placeholder="XXX.XXX.XXX-XX"
+                  pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                  title="Informe o CPF no formato XXX.XXX.XXX-XX"
+                  required
+                />
+              </div>
+
+              <div class="col-md-4">
+                <label for="data_nascimento" class="form-label"
+                  >Data de nascimento:</label
+                >
+                <input
+                  type="date"
+                  class="form-control"
+                  id="data_nascimento"
+                  name="data_nascimento"
+                  required
+                />
+              </div>
+
+              <div class="col-md-4">
+                <label for="cep" class="form-label">CEP:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="cep"
+                  name="cep"
+                  pattern="\d{5}-\d{3}"
+                  title="É preciso que o formato corresponda ao exigido"
+                  placeholder="00000-000"
+                  required
+                />
+              </div>
+
+              <div class="col-md-8">
+                <label for="endereco" class="form-label">Endereço:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="endereco"
+                  name="endereco"
+                  placeholder="Rua, nº e bairro"
+                  required
+                />
+              </div>
+
+              <div class="col-md-4">
+                <label for="cidade" class="form-label">Cidade:</label>
+                <select class="form-select" id="cidade" name="cidade" required>
+                  <option value="" selected disabled>
+                    Selecione uma cidade...
+                  </option>
+                  <option value="nhandeara">Nhandeara</option>
+                  <option value="votuporanga">Votuporanga</option>
+                  <option value="fernandopolis">Fernandopolis</option>
+                  <option value="cosmorama">Cosmorama</option>
+                </select>
+              </div>
+
+              <div class="col-md-6">
+                <label for="foto" class="form-label"
+                  >Foto de perfil (Somente imagens):</label
+                >
+                <input
+                  class="form-control"
+                  type="file"
+                  id="foto"
+                  name="foto"
+                  accept="image/*"
+                  required
+                />
+              </div>
+
+              <div class="col-md-6">
+                <label for="contrato" class="form-label"
+                  >Contrato assinado (em pdf):</label
+                >
+                <input
+                  class="form-control"
+                  type="file"
+                  id="contrato"
+                  name="contrato"
+                  accept="application/pdf"
+                  required
+                />
+              </div>
+
+              <div class="col-12 mt-4 text-end">
+                <button type="reset" class="btn btn-secondary me-2">
+                  Limpar
+                </button>
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div><script src="script.js"></script></div>
+  </body>
+</html>
